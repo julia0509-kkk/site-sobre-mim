@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/980219df28.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Link do swiper-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu site completo</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experiencias">Experiências</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+        
+        <div class="container">
+        <input type="checkbox" class="checkbox" id="chk">
+        <label for="chk" class="label">
+            <i class="fa-solid fa-sun" ></i>
+            <i class="fa-solid fa-moon" ></i>
+            <div class="ball"></div>
+        </label>
+        </div>
+    </ul>
+    <header>
+    <div class="hidden" id="home">
+    <h1>Olá! Meu nome é Júlia Miriã </h1>
+    <div class="span">
+    <span class="balao">Bem vindo ao meu portifólio</span>
+    </div>
+    <img src="Minha foto.jpg" alt="minha foto" width="200" height="200" id="minha">
+    </div>
+    
+        <div class="hidden" id="slide">
+             
+            <div class="hidden" id="gosto-fazer">
+                <button id="previous"><i class="fa-solid fa-angle-left"></i></button>
+                <div class="content"></div>
+                <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="segundo-container swiper" id="experiencias">
+        <div class="slider-wrapper">
+            <div class="card-list swiper-wrapper">
+                <div class="card-item swiper-slide">
+                    <img src="img/html.png" alt="html" class="user-image">
+                    <h2 class="user-name">HTML</h2>
+                    <p class="user-profession">Uma linguagem de marcação</p>
+                    <button class="message-button">Saiba sobre</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="img/css3.png" alt="html" class="user-image">
+                    <h2 class="user-name">CSS</h2>
+                    <p class="user-profession">Outra linguagem de marcação</p>
+                    <button class="message-button">Saiba sobre</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="img/javascript.png" alt="html" class="user-image">
+                    <h2 class="user-name">JavaScript</h2>
+                    <p class="user-profession">Uma linguagem de programação</p>
+                    <button class="message-button">Saiba sobre</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="img/node.png" alt="html" class="user-image">
+                    <h2 class="user-name">Node.js</h2>
+                    <p class="user-profession">Um ambiente de execução do código JavaScript do lado do servidor.</p>
+                    <button class="message-button">Saiba sobre</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="img/GitHub.jpg" alt="html" class="user-image">
+                    <h2 class="user-name">GitHub</h2>
+                    <p class="user-profession">Hospeda repositórios</p>
+                    <button class="message-button">Saiba sobre</button>
+                </div>
+
+                <div class="card-item swiper-slide">
+                    <img src="img/react.png" alt="html" class="user-image">
+                    <h2 class="user-name">React</h2>
+                    <p class="user-profession">Uma biblioteca JavaScript</p>
+                    <button class="message-button">Saiba sobre</button>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="hidden" id="sobre">
+        <h1>Sobre</h1>
+        <p>Meu noime é Júlia Miriã, gosto muito de programação.</p>
+    </div>
+    <footer id="contato">
+        <p>&copy;JúliaMiriã</p>
+    </footer>
+    <!--Link swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

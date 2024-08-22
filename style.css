@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(90deg, rgb(140, 20, 140) 0, violet);
+}
+body.dark {
+    background: #232c35;
+    color: #fff;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.checkbox {
+    opacity: 0;
+}
+.label {
+    background: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+.fa-moon {
+    color: #f1c40f
+}
+.fa-sun {
+    color: #f39c12;
+}
+ul {
+    display: flex;
+    justify-content:space-around;
+    list-style-type: none;
+    background-color: rgba(94, 35, 104, 0.267);
+}
+li {
+    padding: 15px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li a:hover {
+    background-color: rgb(90, 11, 90);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.content {
+    position: absolute;
+        display: flex;
+        width: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+}
+
+.item {
+    width: 900px;
+    height: 350px;
+    transition: all 1s;
+}
+
+.item:first-child {
+    margin-left: -100%;
+}
+
+.item img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.balao {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.balao::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.span {
+    display: flex;
+    justify-content:right;
+    align-items: end;
+}
+header {
+    height: 900px;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+#minha {
+    border-radius: 50%;
+}
+#gosto-fazer {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+        height: 350px;
+        background-color: black;
+        margin: 20vh auto;
+        border-radius: 10px;
+        box-shadow: 0 20px 30px black;
+}
+
+#esperiencias {
+    height: 300px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+#previous, #next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: violet;
+    color: whitesmoke;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+}
+
+#previous:hover {
+    background-color: rgb(91, 11, 92);
+}
+#next:hover {
+    background-color: rgb(91, 11, 92);
+}
+
+
+#sobre {
+    text-align: center;
+    padding: 15px;
+    height: 200px;
+
+}
+footer {
+    background-color: rgb(250, 151, 250);
+    color: white;
+    text-align: center;
+    height: 100px;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+
+/*Card slide*/
+.card-list .card-item {
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.slider-wrapper {
+    overflow: hidden;
+    margin: 0 70px 40px;
+}
+.card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+}
+.card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+.card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030720;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+.card-list .card-item .message-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+}
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -50px;
+}
+.slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
